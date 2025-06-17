@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fried Story - Authentic Indian Fried Chicken & More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-red': '#DC2626',
+                        'dark-bg': '#0A0A0A',
+                        'dark-card': '#1A1A1A',
+                        'dark-border': '#2A2A2A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-white font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-dark-bg/95 backdrop-blur-sm border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="assets/logo/logo.jpg" alt="Fried Story Logo" class="h-10 w-auto">
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-white hover:text-brand-red transition-colors duration-300">Home</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-brand-red transition-colors duration-300">About</a>
+                        <a href="#menu" class="nav-link text-gray-300 hover:text-brand-red transition-colors duration-300">Menu</a>
+                        <a href="#gallery" class="nav-link text-gray-300 hover:text-brand-red transition-colors duration-300">Gallery</a>
+                        <a href="#reviews" class="nav-link text-gray-300 hover:text-brand-red transition-colors duration-300">Reviews</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-brand-red transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark-card border-t border-dark-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-white hover:text-brand-red transition-colors">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-brand-red transition-colors">About</a>
+                <a href="#menu" class="block px-3 py-2 text-gray-300 hover:text-brand-red transition-colors">Menu</a>
+                <a href="#gallery" class="block px-3 py-2 text-gray-300 hover:text-brand-red transition-colors">Gallery</a>
+                <a href="#reviews" class="block px-3 py-2 text-gray-300 hover:text-brand-red transition-colors">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-brand-red transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-card to-dark-bg"></div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="text-white">Fried</span>
+                    <span class="text-brand-red">Story</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Authentic Indian flavors meet crispy perfection. Experience the best fried chicken, burgers, and alphams in Kerala.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+919876543210" class="bg-brand-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-phone mr-2"></i>
+                        Order Now: +91 90611 95173
+                    </a>
+                    <a href="#menu" class="border-2 border-white hover:bg-white hover:text-dark-bg text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                        View Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-brand-red">Fried Story</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Born from a passion for authentic flavors and crispy perfection, Fried Story brings you the finest fried chicken experience in Kerala.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="h-96 rounded-lg overflow-hidden">
+                        <img src="assets/logo/logo.jpg" 
+                            alt="Fried Story Restaurant Interior" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-brand-red pl-6">
+                        <h3 class="text-2xl font-semibold mb-3">Our Story</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            At Fried Story, we believe every bite should tell a story of flavor, tradition, and quality. Located in the heart of Nileshwar, we've been serving our community with the crispiest fried chicken, juiciest burgers, and most flavorful alphams.
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-brand-red pl-6">
+                        <h3 class="text-2xl font-semibold mb-3">Our Promise</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Every dish is prepared with fresh ingredients, authentic spices, and a commitment to excellence. We blend traditional Kerala flavors with modern cooking techniques to create an unforgettable dining experience.
+                        </p>
+                    </div>
+                    <div class="flex space-x-6 pt-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-red">2+</div>
+                            <div class="text-sm text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-red">1000+</div>
+                            <div class="text-sm text-gray-400">Happy Customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-red">20+</div>
+                            <div class="text-sm text-gray-400">Menu Items</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-brand-red">Menu</span></h2>
+                <p class="text-xl text-gray-300">Delicious flavors crafted with passion and served fresh</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Fried Chicken -->
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border hover:border-brand-red transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="bg-brand-red/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-drumstick-bite text-2xl text-brand-red"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-red mb-2">Fried Chicken</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Classic Fried Chicken Bucket</span>
+                            <span class="text-white font-semibold">₹299</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Spicy Chicken Wings</span>
+                            <span class="text-white font-semibold">₹199</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Fiery Kerala Pepper Chicken</span>
+                            <span class="text-white font-semibold">₹349</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burgers -->
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border hover:border-brand-red transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="bg-brand-red/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hamburger text-2xl text-brand-red"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-red mb-2">Burgers</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Double Cheese Chicken Burger</span>
+                            <span class="text-white font-semibold">₹249</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Peri Peri Crispy Burger</span>
+                            <span class="text-white font-semibold">₹229</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Classic Fried Egg Burger</span>
+                            <span class="text-white font-semibold">₹199</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alphams -->
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border hover:border-brand-red transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="bg-brand-red/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-fire text-2xl text-brand-red"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-red mb-2">Alphams</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">BBQ Alpham (Half)</span>
+                            <span class="text-white font-semibold">₹179</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Spicy Grill Alpham (Full)</span>
+                            <span class="text-white font-semibold">₹329</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Smoky Tandoori Alpham</span>
+                            <span class="text-white font-semibold">₹289</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border hover:border-brand-red transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="bg-brand-red/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-utensils text-2xl text-brand-red"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-red mb-2">Sides</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Masala Fries</span>
+                            <span class="text-white font-semibold">₹89</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Chicken Popcorn Bites</span>
+                            <span class="text-white font-semibold">₹149</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="tel:+919876543210" class="bg-brand-red hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call to Order: +91 90611 95173
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-dark-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Photo <span class="text-brand-red">Gallery</span></h2>
+                <p class="text-xl text-gray-300">A visual feast of our delicious offerings</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Image 1 -->
+    <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+        <img src="assets/images/img1.jpg" alt="Classic Fried Chicken" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Image 2 -->
+    <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+        <img src="assets/images/img2.jpg" alt="Chicken Burger" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Image 3 -->
+    <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+        <img src="assets/images/img33.jpg" alt="Grilled Alpham" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Image 4 -->
+    <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+        <img src="assets/images/img4.jpg" alt="Spicy Wings" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Image 5 -->
+    <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+        <img src="assets/images/img5.jpg" alt="Double Cheese Burger" class="w-full h-full object-cover">
+    </div>
+    
+</div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Customer <span class="text-brand-red">Reviews</span></h2>
+                <p class="text-xl text-gray-300">What our customers say about us</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ashik Zubaid</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"I would like to give 9/10 for the quality and the hygiene level of the restaurant. Apart from Arabic bread 🥖 everything is finger licking"</p>
+                </div>
+                
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Nadeer Pallipuzha</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Delicious fried chicken... Most recommended.."</p>
+                </div>
+                
+                <div class="bg-dark-card rounded-lg p-6 border border-dark-border">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Midun Mohan</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Best Alfaham around Nileshwar🤤"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Contact <span class="text-brand-red">Us</span></h2>
+                <p class="text-xl text-gray-300">Get in touch for orders and inquiries</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-brand-red/20 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-brand-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Phone Orders</h3>
+                            <p class="text-gray-300 mb-2">Call us directly to place your order</p>
+                            <a href="tel:+919876543210" class="text-brand-red hover:text-red-400 font-semibold text-lg">+91 90611 95173</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-brand-red/20 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-brand-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Location</h3>
+                            <p class="text-gray-300">742H+C2V, Nileshwaram – Edathode Rd,<br>Nileshwar, Kerala 671314</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-brand-red/20 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-brand-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Opening Hours</h3>
+                            <p class="text-gray-300">Mon - Sun: 4:00 PM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#" class="bg-brand-red/20 hover:bg-brand-red/30 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram text-brand-red"></i>
+                        </a>
+                        <!-- <a href="#" class="bg-brand-red/20 hover:bg-brand-red/30 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook text-brand-red"></i> -->
+                        </a>
+                    </div>
+                </div>
+                
+                <iframe 
+                    src="https://www.google.com/maps?q=12.251112739019318,75.12751318224451&z=17&output=embed"
+                    width="100%" 
+                    height="384" 
+                    style="border:0; border-radius: 0.5rem;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-red mb-4">Fried Story</h3>
+                    <p class="text-gray-300 mb-4">Authentic Indian flavors meet crispy perfection. Experience the best in Kerala.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <!-- <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a> -->
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-gray-300 hover:text-brand-red transition-colors">Home</a>
+                        <a href="#about" class="block text-gray-300 hover:text-brand-red transition-colors">About Us</a>
+                        <a href="#menu" class="block text-gray-300 hover:text-brand-red transition-colors">Menu</a>
+                        <a href="#contact" class="block text-gray-300 hover:text-brand-red transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2 text-brand-red"></i> +91 90611 95173</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-brand-red"></i> Nileshwar, Kerala</p>
+                        <p><i class="fas fa-clock mr-2 text-brand-red"></i> 4:00 PM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-border mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Fried Story. All rights reserved. | Designed with ❤️ for authentic flavors</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Update active navigation link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-gray-300');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.remove('text-gray-300');
+                    link.classList.add('text-white');
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-dark-bg');
+                navbar.classList.remove('bg-dark-bg/95');
+            } else {
+                navbar.classList.remove('bg-dark-bg');
+                navbar.classList.add('bg-dark-bg/95');
+            }
+        });
+
+        // Gallery image click effect (placeholder)
+        document.querySelectorAll('[class*="aspect-square"]').forEach(item => {
+            item.addEventListener('click', () => {
+                // Placeholder for image modal/lightbox functionality
+                console.log('Image clicked - implement lightbox here');
+            });
+        });
+
+        // Phone number click tracking (optional)
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', () => {
+                console.log('Phone call initiated');
+            });
+        });
+
+        // Intersection Observer for animations (optional enhancement)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Initialize first section as visible
+        document.querySelector('#home').style.opacity = '1';
+        document.querySelector('#home').style.transform = 'translateY(0)';
+    </script>
+</body>
+</html>
